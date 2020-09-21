@@ -1,7 +1,7 @@
 
 > Open this page at [https://0x77dev.github.io/littlekari/](https://0x77dev.github.io/littlekari/)
 
-## How to change the code? [Build status badge](https://github.com/0x77dev/littlekari/workflows/MakeCode/badge.svg)
+## How to change the code? ![Build status badge](https://github.com/0x77dev/littlekari/workflows/MakeCode/badge.svg)
 
 To edit this repository in MakeCode.
 
