@@ -9,8 +9,14 @@ basic.forever(function () {
   strip.rotate(offset);
 });
 basic.forever(function () {
-  if (RobotCar_Keyestudio.Sonar.ping() < 10){
-     RobotCar_Keyestudio.Motors.stop();
+  if (RobotCar_Keyestudio.Sonar.ping() < 20 || RobotCar_Keyestudio.IrSensors.isRightBlocked() || RobotCar_Keyestudio.IrSensors.isLeftBlocked()){
+     RobotCar_Keyestudio.Motors.move(__internal.__speedPicker(-100));
+     if(RobotCar_Keyestudio.IrSensors.isRightBlocked()){
+         RobotCar_Keyestudio.Motors.rightMotor(-100)
+     }
+     if(RobotCar_Keyestudio.IrSensors.isLeftBlocked()){
+         RobotCar_Keyestudio.Motors.leftMotor(-100)
+     }
   } else {
       RobotCar_Keyestudio.Motors.move(__internal.__speedPicker(100));
   }
@@ -23,6 +29,6 @@ basic.forever(function () {
   basic.clearScreen();
   basic.showIcon(IconNames.SmallHeart);
   basic.clearScreen();
-  basic.showString("Happy Birthday!");
+  basic.showString("Happy Birthday, Kari");
   basic.clearScreen();
 });
