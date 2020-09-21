@@ -1,5 +1,6 @@
-
 > Open this page at [https://0x77dev.github.io/littlekari/](https://0x77dev.github.io/littlekari/)
+
+Made for Ks0426 keyestudio Micro:bit Mini Smart Robot Car Kit V2.
 
 ## How to change the code? ![Build status badge](https://github.com/0x77dev/littlekari/workflows/MakeCode/badge.svg)
 
