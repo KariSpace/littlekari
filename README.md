@@ -1,16 +1,7 @@
 
 > Open this page at [https://0x77dev.github.io/littlekari/](https://0x77dev.github.io/littlekari/)
 
-## Использовать это расширение
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/0x77dev/littlekari** and import
-
-## Править этот проект ![Build status badge](https://github.com/0x77dev/littlekari/workflows/MakeCode/badge.svg)
+## How to change the code? [Build status badge](https://github.com/0x77dev/littlekari/workflows/MakeCode/badge.svg)
 
 To edit this repository in MakeCode.
 
