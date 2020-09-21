@@ -1,21 +1,28 @@
-
-basic.forever(function() {
-    let strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB)
-    RobotCar_Keyestudio.Motors.spin(__internal.__turnRatioPicker(100))
-    strip.clear()
-    strip.setBrightness(255)
-    strip.rotate(16)
-    RobotCar_Keyestudio.Motors.stop()
-    RobotCar_Keyestudio.Leds.showRed()
-    basic.showIcon(IconNames.Heart)
-    basic.clearScreen()
-    strip.showRainbow(1, 255)
-    basic.pause(500)
-    basic.showIcon(IconNames.SmallHeart)
-    basic.clearScreen()
-    basic.pause(500)
-    basic.showString("Happy Birthday!");
-    basic.clearScreen()
-    basic.pause(500)
-})
-
+let strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB);
+let offset = 0;
+basic.forever(function () {
+  offset++;
+  if(offset === 255) offset = 0;
+  strip.clear();
+  strip.showRainbow(offset, 255);
+  strip.setBrightness(255);
+  strip.rotate(offset);
+});
+basic.forever(function () {
+  if (RobotCar_Keyestudio.Sonar.ping() < 10){
+     RobotCar_Keyestudio.Motors.stop();
+  } else {
+      RobotCar_Keyestudio.Motors.move(__internal.__speedPicker(100));
+  }
+    
+});
+basic.forever(function () {
+  
+  RobotCar_Keyestudio.Leds.showRed();
+  basic.showIcon(IconNames.Heart);
+  basic.clearScreen();
+  basic.showIcon(IconNames.SmallHeart);
+  basic.clearScreen();
+  basic.showString("Happy Birthday!");
+  basic.clearScreen();
+});
