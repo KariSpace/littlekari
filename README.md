@@ -1,6 +1,6 @@
 > Open this page at [https://0x77dev.github.io/littlekari/](https://0x77dev.github.io/littlekari/)
 
-Made for Ks0426 keyestudio Micro:bit Mini Smart Robot Car Kit V2.
+Made for [Ks0426 keyestudio Micro:bit Mini Smart Robot Car Kit V2](https://wiki.keyestudio.com/Ks0426_keyestudio_Micro:bit_Mini_Smart_Robot_Car_Kit_V2#IOS_Bluetooth_Wireless_Programming_and_Control).
 
 ## How to change the code? ![Build status badge](https://github.com/0x77dev/littlekari/workflows/MakeCode/badge.svg)
 
