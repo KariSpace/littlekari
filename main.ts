@@ -1,7 +1,7 @@
 let strip = neopixel.create(DigitalPin.P5, 18, NeoPixelMode.RGB);
 strip.setBrightness(255);
 
-const isBlocked = (): boolean => (RobotCar_Keyestudio.Sonar.ping() < 20 || RobotCar_Keyestudio.IrSensors.isRightBlocked() || RobotCar_Keyestudio.IrSensors.isLeftBlocked());
+const isBlocked = (): boolean => (RobotCar_Keyestudio.Sonar.ping() < 60 || RobotCar_Keyestudio.IrSensors.isRightBlocked() || RobotCar_Keyestudio.IrSensors.isLeftBlocked());
 
 // Led Loop
 let offset = 0;
@@ -23,9 +23,6 @@ basic.forever(() => {
 // Motor Loop
 basic.forever(() => { 
     if(isBlocked()){
-         basic.clearScreen();
-         basic.showIcon(IconNames.Angry);
-         basic.pause(500);
          RobotCar_Keyestudio.Motors.move(__internal.__speedPicker(-100));
          if(RobotCar_Keyestudio.IrSensors.isRightBlocked()){
              RobotCar_Keyestudio.Motors.rightMotor(-100)
@@ -55,7 +52,7 @@ basic.forever(() => {
      } else {
         basic.clearScreen();
         basic.showIcon(IconNames.Angry);
-        basic.pause(100);
-        basic.showString("Let me free", 75);
+        basic.clearScreen();
+        basic.showString(RobotCar_Keyestudio.Sonar.ping().toString(), 100);
      }
 });
